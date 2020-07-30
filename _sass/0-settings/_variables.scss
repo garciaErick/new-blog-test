@@ -6,8 +6,7 @@
 $base-spacing-unit: 20px;
 
 // Transition
-$global-transition: all .2s;
-
+$global-transition: all 0.2s;
 
 // *****************
 // Color Variables
@@ -19,12 +18,25 @@ $gray: #757575;
 $light-gray: #c6c6c6;
 $white: #fff;
 
+/* Material Palenight */
+$material-palenight-dark: #23232d; /* Dark RGBA(35, 35, 45, 1)*/
+$material-palenight: #2c2c36; /* Lighter RGBA(44, 44, 54, 1)*/
+$material-palenight-accent: #3b3b4b; /* Accent color UI Elements */
+$material-palenight-accent-font: #575772; /* Accent Color RGBA(87, 87, 114, 1)*/
+$material-palenight-foreground: #959dcb; /* Foreground RGBA(149, 157, 203, 1)*/
+
+$discord-foreground: hsla(0, 0%, 100%, 0.6);
+$discord-blue: #7289da; /* Discord Accent RGBA(114, 137, 218, 1)*/
+
+/* Primary Colors */
+$success-color: #66bb6a; /* Success */
+$error-color: #e57373; /* Error */
+
 // Body Color
 $text-color: $white;
 
 // Background Colors
-$background-color: $blue-dark;
-
+$background-color: $material-palenight-dark;
 
 // *****************
 // Typography
@@ -38,14 +50,14 @@ $base-line-height: 1.7;
 
 // Headings
 $heading-font-weight: 700;
-$heading-font-family: 'Poppins', Arial, sans-serif; 
+$heading-font-family: 'Poppins', Arial, sans-serif;
 $heading-color: $text-color;
 
-$font-size-h1:  36px;
-$font-size-h2:  28px;
-$font-size-h3:  24px;
-$font-size-h4:  20px;
-$font-size-h5:  18px;
-$font-size-h6:  16px;
+$font-size-h1: 36px;
+$font-size-h2: 28px;
+$font-size-h3: 24px;
+$font-size-h4: 20px;
+$font-size-h5: 18px;
+$font-size-h6: 16px;
 
 $heading-line-height: 1.4em;
