@@ -4,7 +4,7 @@ title: Tsunderick
 logo: # You can add own logo. For example '/images/logo.png'.
 description: Aditu is a stylish and modern dark theme with a clean and unique design.
 baseurl: "/new-blog-test" # The subpath of your site, e.g. /blog
-url: "https://erick-garcia.com" # The base hostname & protocol for your site, e.g. http://example.com
+url: "https://erick-garcia.com/new-blog-test" # The base hostname & protocol for your site, e.g. http://example.com
 
 
 #-------------------------------
