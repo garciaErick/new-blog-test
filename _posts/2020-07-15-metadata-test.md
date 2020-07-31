@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Metadata usability test
-# Author.
 author: Erick Garcia
+image:  '/images/metadata-thumbnail.PNG'
 tags: recipes
 ---
 

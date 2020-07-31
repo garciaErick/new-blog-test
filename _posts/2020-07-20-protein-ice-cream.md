@@ -3,33 +3,37 @@ layout: post
 title: Anabolic protein ice cream
 # Author.
 author: Greg Doucette
+image: '/images/anabolicIceCream.jpg'
 tags: recipes
 ---
 
 This recipe is made by [@Greg Doucette](https://www.gregdoucette.com) and since he has this information public in this [video](https://www.youtube.com/watch?v=q-m_6M6nUd8) so I took the liberty of listing the ingredients for my convenience and the general public. Consider buying his cookbook, there are lots of great substitutes and cooking ideas!
 
-
 ## Ingredients
-* 1.5 scooops of protein
-* 105g of frozen fruit (low carb berries)
-* 1tbsp of PB2 peanut butter powder
-* 1/2 tsp of xantham gum
-* 1/3 cup of almond milk
+
+- 1.5 scooops of protein
+- 105g of frozen fruit (low carb berries)
+- 1tbsp of PB2 peanut butter powder
+- 1/2 tsp of xantham gum
+- 1/3 cup of almond milk
 
 ## Instructions
+
 1. Place everything into blender and continuously blend until thickened and does not spill when flipping the blender
 2. Continuously blend until thickened and does not spill when flipping the blender
-  * May need to use spatula to remove mix from blender surface and continue blending
-  
+
+- May need to use spatula to remove mix from blender surface and continue blending
+
 ## Nutritional information
-* 360 calories (If you can finish it :P)
 
+- 360 calories (If you can finish it :P)
 
-| ![image]({{site.baseurl}}/images/anabolicIceCream.jpg) | 
-|:--:| 
-| *Spoonful of Protein Icecream* |
+| ![image]({{site.baseurl}}/images/anabolicIceCream.jpg) |
+| :----------------------------------------------------: |
+|             _Spoonful of Protein Icecream_             |
 
 <a href="https://www.yummly.com" class="YUMMLY-YUM-BUTTON">Yum</a>
+
 <script src="https://www.yummly.com/js/widget.js?general"></script>
 <script type="application/ld+json">
 {
@@ -55,4 +59,3 @@ This recipe is made by [@Greg Doucette](https://www.gregdoucette.com) and since 
   "recipeYield": "1 serving"
 }
 </script>
-
