@@ -2,7 +2,7 @@
 layout: post
 title: Anabolic protein ice cream
 author: Greg Doucette
-description: 'Recipe for Greg Doucette's anabolic ice cream'
+description: Recipe for Greg Doucette's anabolic ice cream
 image: '/images/anabolicIceCream.jpg'
 tags: recipes
 ---
