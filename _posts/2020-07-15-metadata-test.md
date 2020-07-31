@@ -10,6 +10,7 @@ So imagine this is some recipe page and inside of it we have some @type: Recipe 
 
 
 ```html
+{% highlight js %}
 <script type="application/ld+json">
 {
   "@context": "http://schema.org",
@@ -25,6 +26,7 @@ So imagine this is some recipe page and inside of it we have some @type: Recipe 
     "3/4 cup of sugar"
   ],
 }
+{% endhighlight %}
 </script>
 ```
 
