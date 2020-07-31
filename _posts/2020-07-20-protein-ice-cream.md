@@ -25,7 +25,7 @@ This recipe is made by [@Greg Doucette](https://www.gregdoucette.com) and since 
 * 360 calories (If you can finish it :P)
 
 
-| ![image](/assets/img/anabolicIceCream.jpg) | 
+| ![image]({{site.baseurl}}/images/anabolicIceCream.jpg) | 
 |:--:| 
 | *Spoonful of Protein Icecream* |
 

@@ -28,7 +28,7 @@ So imagine this is some recipe page and inside of it we have some @type: Recipe 
 </script>
 ```
 
-| ![image](/assets/img/image.png) | 
+| ![image]({{site.baseurl}}/images/image.png) | 
 |:--:| 
 | *Rich text validator screenshot from Google* |
 
