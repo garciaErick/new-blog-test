@@ -1,7 +1,7 @@
 ---
 layout: post
-title: My color pallete
-description: blablabla
+title: My preferred color pallete
+description: Explaining what is material palenight, and why I like it
 image: '/images/colors.png'
 tags: colorscheme theme material-palenight 
 ---
