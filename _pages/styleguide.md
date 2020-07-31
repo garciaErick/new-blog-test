@@ -111,15 +111,15 @@ A paragraph looks like this — dolor amet cray stumptown fingerstache neutra fo
 
 <div class="gallery-box">
   <div class="gallery">
-    <img src="/images/03.jpg">
-    <img src="/images/07.jpg">
-    <img src="/images/08.jpg">
-    <img src="/images/22.jpg">
-    <img src="/images/10.jpg">
-    <img src="/images/21.jpg">
-    <img src="/images/29.jpg">
-    <img src="/images/30.jpg">
-    <img src="/images/31.jpg">
+    <img src="{{site.baseurl}}/images/03.jpg">
+    <img src="{{site.baseurl}}/images/07.jpg">
+    <img src="{{site.baseurl}}/images/08.jpg">
+    <img src="{{site.baseurl}}/images/22.jpg">
+    <img src="{{site.baseurl}}/images/10.jpg">
+    <img src="{{site.baseurl}}/images/21.jpg">
+    <img src="{{site.baseurl}}/images/29.jpg">
+    <img src="{{site.baseurl}}/images/30.jpg">
+    <img src="{{site.baseurl}}/images/31.jpg">
   </div>
   <em>Gallery / <a href="https://unsplash.com/" target="_blank">Unsplash</a></em>
 </div>
