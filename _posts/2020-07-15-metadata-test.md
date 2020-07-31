@@ -9,7 +9,6 @@ tags: recipes
 So imagine this is some recipe page and inside of it we have some @type: Recipe metadata, from the snippet which will enable us to get rich pins from supported websites such as [this one](https://www.pinterest.com.mx/pin/706924472751471915/)
 
 
-```html
 {% highlight js %}
 <script type="application/ld+json">
 {
@@ -28,7 +27,6 @@ So imagine this is some recipe page and inside of it we have some @type: Recipe 
 }
 {% endhighlight %}
 </script>
-```
 
 | ![image]({{site.baseurl}}/images/image.png) | 
 |:--:| 
