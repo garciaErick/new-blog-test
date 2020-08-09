@@ -19,7 +19,7 @@ author:
 hero:
   title: Erick Garcia 
   description: Keep it simple 
-  image: '/images/01.jpg'
+  image: '/images/Ilya_Kuvshinov-nature.jpg'
 
 
 #-------------------------------
@@ -37,12 +37,12 @@ contact:
 # Example of adding a new link to the footer - {icon: "ion-logo-github", link: "https://github.com"}
 # Other icons can be found at https://ionicons.com
 social:
-- {icon: "ion-logo-twitter", link: "https://twitter.com"}
-- {icon: "ion-logo-facebook", link: "https://facebook.com"}
-- {icon: "ion-logo-dribbble", link: "https://dribbble.com"}
-- {icon: "ion-logo-instagram", link: "https://instagram.com"}
-- {icon: "ion-logo-pinterest", link: "https://pinterest.com"}
-- {icon: "ion ion-logo-github", link: "https://github.com"}
+- {icon: "ion-logo-twitter", link: "http://twitter.erick-garcia.com"}
+- {icon: "ion-logo-instagram", link: "http://instagram.erick-garcia.com"}
+- {icon: "ion ion-logo-github", link: "http://github.erick-garcia.com"}
+- {icon: "ion ion-logo-linkedin", link: "http://linkedin.erick-garcia.com"}
+- {icon: "ion ion-logo-steam", link: "http://steam.erick-garcia.com"}
+- {icon: "ion ion-logo-youtube", link: "http://youtube.erick-garcia.com"}
 
 
 #-------------------------------
