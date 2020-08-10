@@ -108,8 +108,8 @@ pagination:
   per_page: 9 
 
   # The permalink structure for the paginated pages (this can be any level deep)
-  paginate: 9
-  permalink: '/legacy/page/:num/' # Pages are index.html inside this folder (default)
+  # paginate: 9
+  permalink: '/page/:num/' # Pages are index.html inside this folder (default)
   #permalink: '/page/:num.html' # Pages are simple html files 
   #permalink: '/page/:num' # Pages are html files, linked jekyll extensionless permalink style.
 
@@ -147,4 +147,4 @@ pagination:
 
   # Optional, the default name of the index file for generated pages (e.g. 'index.html')
   # Without file extension
-  indexpage: '1index'
+  indexpage: 'index'

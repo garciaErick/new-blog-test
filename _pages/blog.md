@@ -8,6 +8,7 @@ pagination:
 
 <div class="container">
 	<br>
+	<h1 style="text-align: center;">Posts</h1>
 	<div class="row">
 		<div class="col col-12">
 			<div class="container__inner">
