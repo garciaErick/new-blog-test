@@ -1,13 +1,30 @@
-<div class="container">
-  <div class="row">
-    <div class="col col-12 load-more">
-      {% assign postCount = site.posts | size %}
-      {% assign postsCovered = site.paginate | plus:offset %}
-      {% if postsCovered < postCount %}
-      <div class="load-more-section">
-        <button class="load-more-posts button button--middle">Load More Posts <i class="ion ion-ios-arrow-down"></i></button>
-      </div>
-      {% endif %}
-    </div>
-  </div>
+<!-- <div class="container">
+	<div class="row">
+		<div class="col col-12 load-more">
+			{% assign postCount = site.posts | size %}
+			{% assign postsCovered = site.paginate | plus:offset %}
+			{% if postsCovered < postCount %}
+			<div class="load-more-section">
+				<button class="load-more-posts button button--middle">Load More Posts <i
+						class="ion ion-ios-arrow-down"></i></button>
+			</div>
+			{% endif %}
+		</div>
+	</div>
+</div> -->
+<div class="load-more-section">
+	{% if paginator.total_pages > 1 %}
+	<ul>
+		{% if paginator.previous_page %}
+		<a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">
+			<button class="button button--middle"><i class="ion ion-ios-arrow-back"></i> Newer</button>
+		</a>
+		{% endif %}
+		{% if paginator.next_page %}
+		<a href="{{ paginator.next_page_path | prepend: site.baseurl }}">
+			<button class="button button--middle">Older <i class="ion ion-ios-arrow-forward"></i></button>
+		</a>
+		{% endif %}
+	</ul>
+	{% endif %}
 </div>
