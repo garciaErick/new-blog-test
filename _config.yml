@@ -3,6 +3,7 @@
 title: Tsunderick  
 logo: # You can add own logo. For example '/images/logo.png'.
 description: Welcome to my realm mortals!
+# baseurl: "/new-blog-test" # The subpath of your site, e.g. /blog
 baseurl: "" # The subpath of your site, e.g. /blog
 url: "https://erick-garcia.com" # The base hostname & protocol for your site, e.g. http://example.com
 
@@ -143,7 +144,6 @@ pagination:
 
   # # Optional, the default file extension for generated pages (e.g html, json, xml).
   # # Internally this is set to html by default
-  # extension: html
 
   # # Optional, the default name of the index file for generated pages (e.g. 'index.html')
   # # Without file extension
