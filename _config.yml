@@ -1,7 +1,7 @@
 #-------------------------------
 # General Site Settings
 title: Tsunderick  
-logo: '/images/senjougahara.jpg' # You can add own logo. For example '/images/logo.png'.
+logo: # You can add own logo. For example '/images/logo.png'.
 description: Welcome to my realm mortals!
 baseurl: "" # The subpath of your site, e.g. /blog
 url: "https://erick-garcia.com/new-blog-test" # The base hostname & protocol for your site, e.g. http://example.com
