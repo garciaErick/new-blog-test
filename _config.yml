@@ -27,7 +27,7 @@ hero:
 # Contact Settings
 contact:
   email: me@erick-garcia.com # Add your email for contant form
-  description: 元気いいな？何かいいことでもあったのかい？
+  description: Send me an email through this form to contact@erick-garcia.com
 
 # NOTE
 # Aditu theme comes with a contact form built-in. You can use this form with Formspree service and get up to 50 submissions for free. Also, you can easily switch to another service if you want.
