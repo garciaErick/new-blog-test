@@ -144,4 +144,4 @@ pagination:
     after: 2
 
   feed:
-    path: atom.xml
+    path: "/atom.xml"
