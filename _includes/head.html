@@ -27,5 +27,8 @@
     {% include main.scss %}
   {% endcapture %}
   {{ include_to_scssify | scssify }}
-  </style>
+	</style>
+	
+	<!-- Meta tags for automated discovery of atom.xml -->
+	{% feed_meta %}
 </head>
