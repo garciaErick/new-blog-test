@@ -5,8 +5,8 @@ title: Tsunderick
 # logo:
 description: Welcome to my realm mortals!
 # The subpath of your site, e.g. /blog
-baseurl: "/new-blog-test"
-# baseurl: ""
+# baseurl: "/new-blog-test"
+baseurl: ""
 url: "https://erick-garcia.com"
 
 # Author Settings
