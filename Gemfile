@@ -5,3 +5,4 @@ gem "jekyll-paginate-v2"
 gem 'jekyll-tagging'
 gem "jekyll-sitemap"
 gem 'jekyll-feed'
+gem 'jekyll-seo-tag' 
