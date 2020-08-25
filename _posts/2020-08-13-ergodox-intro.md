@@ -4,7 +4,8 @@ title: Why Ergodox EZ is the best keyboard in the market
 author: Erick Garcia
 description: Ergodoz EZ is an ortholinear, customizable mechanical keyboard
 image: '/images/posts/ergodox/ergodox-thumbnail.jpg'
-tags:   [mk, Mechanical Keyboard, Ergodox, remapping, customize]
+date: 2020-08-23 01:01:01
+tags:   [mk, Mechanical-Keyboard, Ergodox, remapping, customize]
 ---
 
 I have always been a really _opinionated_ individual meaning that I have strong opinions how some things should or should not behave. Due to this I am always customizing whatever environment I will be interacting with. As a _software developer_, my Operating System and keyboard are my main tools and I never like to be limited by the things I am able to do. I like to think scripts / OS / keyboard / environments, to be an extension of my body, as such I should be able to control them as I please. One of the many customizations I have is for the k
