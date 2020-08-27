@@ -1,0 +1,627 @@
+<style>
+	div>.player-img {
+		-webkit-transition: 300ms;
+		transition: 300ms;
+	}
+
+	div>.player-img:hover {
+		opacity: 0.7;
+		cursor: pointer;
+	}
+
+	div {
+		box-sizing: border-box;
+	}
+
+	.player-img {
+		width: 100%;
+		height: 100%;
+	}
+
+	p {
+		margin-top: 0;
+		margin-bottom: 0.3em;
+	}
+
+	div,
+	section {
+		box-sizing: border-box;
+	}
+
+	.c-containter {
+		display: -webkit-box;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		flex-flow: column nowrap;
+		-webkit-box-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		align-items: center;
+		width: 100%;
+		padding: 1em;
+	}
+
+	.music-container {
+		position: relative;
+		display: -webkit-box;
+		display: flex;
+		box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3);
+		max-height: 290px;
+	}
+
+	.album-cover {
+		-webkit-box-flex: 1;
+		flex: 1 0 30%;
+	}
+
+	.album-cover img {
+		width: 100%;
+		height: 100%;
+	}
+
+	.arrow {
+		position: absolute;
+		top: calc(50% - 2.5em);
+		background: transparent;
+		border: 0;
+		width: 5em;
+		height: 5em;
+		cursor: pointer;
+		color: white;
+	}
+
+	.arrow:hover {
+		background: rgba(255, 255, 255, 0.5);
+	}
+
+	.arrow img {
+		display: block;
+		width: 20px;
+		margin: 0 auto;
+	}
+
+	.arrow.left {
+		left: -5em;
+	}
+
+	.arrow.right {
+		right: -5em;
+	}
+
+	.music-player {
+		display: -webkit-box;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		flex-flow: column wrap;
+		-webkit-box-pack: center;
+		justify-content: center;
+		background: #3b3b4b;
+		padding: 1em;
+		text-align: center;
+		width: 500px;
+		max-width: 500px;
+	}
+
+	.music-player__title {
+		margin: 0 0 0.1em 0;
+	}
+
+	.music-player__author {
+		margin: 0 0 0.5em 0;
+	}
+
+	.music-bar {
+		background: #efefef;
+		stroke-width: 1;
+		height: 8px;
+		width: 100%;
+	}
+
+	.music-bar:hover {
+		cursor: pointer;
+	}
+
+	.music-bar #length {
+		width: 0%;
+		background: #2196F3;
+		height: 100%;
+		-webkit-transition: width linear 200ms;
+		transition: width linear 200ms;
+	}
+
+	.music-time {
+		display: -webkit-box;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		flex-flow: row wrap;
+	}
+
+	.music-time__last {
+		margin-left: auto;
+	}
+
+	.music-order {
+		display: -webkit-box;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		flex-flow: row wrap;
+	}
+
+	.music-order__shuffle,
+	.music-order__loop {
+		width: 1.2em;
+		height: 1.2em;
+		opacity: 0.2;
+		margin: 0.3em 0;
+	}
+
+	.music-order__shuffle.is-loop,
+	.music-order__loop.is-loop {
+		opacity: 1 !important;
+	}
+
+	.music-order__shuffle.is-loop-one,
+	.music-order__loop.is-loop-one {
+		opacity: 1 !important;
+	}
+
+	.music-order__shuffle {
+		margin-left: auto;
+	}
+
+	.music-control {
+		display: -webkit-box;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		flex-flow: row wrap;
+		-webkit-box-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		align-items: center;
+		height: 2em;
+	}
+
+	.music-control__play {
+		width: 3em;
+		height: 3em;
+		margin: 0 1em;
+	}
+
+	.music-control__backward,
+	.music-control__forward {
+		width: 1.5em;
+		height: 1.5em;
+	}
+
+	.disclaimer {
+		font-size: 0.9em;
+		margin-top: 1em;
+		text-align: center;
+	}
+
+	.disclaimer a {
+		color: #2196F3;
+	}
+
+	@media all and (max-width: 960px) {
+		.c-containter {
+			display: block;
+			overflow: auto;
+		}
+
+		.music-container {
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			flex-flow: column wrap;
+			max-height: inherit;
+			max-width: 270px;
+			margin: 0 auto;
+			overflow: auto;
+		}
+
+		.music-player {
+			width: 100%;
+			max-width: 100%;
+		}
+
+		.music-player__title {
+			font-size: 1.5em;
+		}
+
+		.music-player__author {
+			font-size: 1em;
+		}
+
+		.album-cover {
+			position: relative;
+			-webkit-box-flex: 1;
+			flex: 1 1 100%;
+			max-width: 270px;
+			max-height: 270px;
+		}
+
+		.arrow {
+			position: absolute;
+			top: calc(50% - 1.5em);
+			width: 3em;
+			height: 3em;
+		}
+
+		.arrow.left {
+			left: 0;
+		}
+
+		.arrow.right {
+			right: 0;
+		}
+
+		.music-control__play {
+			width: 2.2em;
+			height: 2.2em;
+		}
+	}
+</style>
+
+<section class="section" style="background-color:#2c2c36; margin-bottom: -20px;">
+	<div class="container">
+		<h2 style="text-align: center;">Grab some <span class="discord-blue">headphones</span></h2>
+		<div class="c-containter">
+			<div class="music-container">
+				<section class="album-cover">
+					<img src="http://res.cloudinary.com/dkzj4hdmd/image/upload/v1536400483/cover_yz2mak.jpg" class="cover"
+						alt="From One To Nine by Marcel Pequel" style=" max-width: 270px; max-height: 270px;">
+				</section>
+				<section class=" music-player">
+					<h1 class="music-player__title"></h1>
+					<h2 class="music-player__author"></h2>
+					<div class="music-time">
+						<p class="music-time__current"></p>
+						<p class="music-time__last"></p>
+					</div>
+					<div class="music-bar" id="progress">
+						<div id="length"></div>
+					</div>
+					<div class="music-order">
+						<div class="music-order__loop is-loop" id="loop">
+							<img class="player-img"
+								src="https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/loop.svg" alt="Loop music">
+						</div>
+						<div class="music-order__shuffle" id="shuffle">
+							<img src="https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/shuffle.svg"
+								alt="Shuffle music">
+						</div>
+					</div>
+					<div class="music-control">
+						<div class="music-control__backward" id="prev">
+							<img class="player-img"
+								src="https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/backward.svg" alt="Backward">
+						</div>
+						<div class="music-control__play" id="play">
+							<img src="https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/play.svg" alt="Play"
+								class="play player-img">
+						</div>
+						<div class="music-control__forward" id="next">
+							<img class="player-img"
+								src="https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/forward.svg" alt="Forward">
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<script>
+	(function IIFE() {
+		const list = [
+			{
+				id: 1,
+				url:
+					"http://cdn.atrera.com/audio/Marcel_Pequel_-_01_-_One.mp3",
+				author: "Marcel Pequel",
+				title: "One",
+				cover:
+					"https://erick-garcia.com/images/profile_2019.jpg"
+			},
+			{
+				id: 2,
+				url:
+					"http://cdn.atrera.com/audio/Marcel_Pequel_-_02_-_Two.mp3",
+				author: "Marcel Pequel",
+				title: "Two",
+				cover:
+					"http://cdn.atrera.com/images/cover_yz2mak.jpg"
+			},
+			{
+				id: 3,
+				url:
+					"http://cdn.atrera.com/audio/Marcel_Pequel_-_03_-_Three.mp3",
+				author: "Marcel Pequel",
+				title: "Three",
+				cover:
+					"http://cdn.atrera.com/images/cover_yz2mak.jpg"
+			},
+			{
+				id: 4,
+				url:
+					"http://cdn.atrera.com/audio/Marcel_Pequel_-_04_-_Four.mp3",
+				author: "Marcel Pequel",
+				title: "Four",
+				cover:
+					"http://cdn.atrera.com/images/cover_yz2mak.jpg"
+			},
+			{
+				id: 5,
+				url:
+					"http://cdn.atrera.com/audio/Marcel_Pequel_-_05_-_Five.mp3",
+				author: "Marcel Pequel",
+				title: "Five",
+				cover:
+					"http://cdn.atrera.com/images/cover_yz2mak.jpg"
+			},
+			{
+				id: 6,
+				url:
+					"http://cdn.atrera.com/audio/Marcel_Pequel_-_06_-_Six.mp3",
+				author: "Marcel Pequel",
+				title: "Six",
+				cover:
+					"http://cdn.atrera.com/images/cover_yz2mak.jpg"
+			},
+			{
+				id: 7,
+				url:
+					"http://cdn.atrera.com/audio/Marcel_Pequel_-_07_-_Seven.mp3",
+				author: "Marcel Pequel",
+				title: "Seven",
+				cover:
+					"http://cdn.atrera.com/images/cover_yz2mak.jpg"
+			},
+			{
+				id: 8,
+				url:
+					"http://cdn.atrera.com/audio/Marcel_Pequel_-_08_-_Eight.mp3",
+				author: "Marcel Pequel",
+				title: "Eight",
+				cover:
+					"http://cdn.atrera.com/images/cover_yz2mak.jpg"
+			},
+			{
+				id: 9,
+				url:
+					"http://cdn.atrera.com/audio/Marcel_Pequel_-_09_-_Nine.mp3",
+				author: "Marcel Pequel",
+				title: "Nine",
+				cover:
+					"http://cdn.atrera.com/images/cover_yz2mak.jpg"
+			}
+		];
+
+		let currentId = 0;
+		let isPlaying = false;
+		let isLoop = true;
+		let isShuffle = false;
+		let currentAudio = "music1";
+		let timer = null;
+		let loopOne = false;
+
+		const currentTimeIndicator = document.querySelector(".music-time__current");
+		const leftTimeIndicator = document.querySelector(".music-time__last");
+		const progressBar = document.getElementById("length");
+		const playBtn = document.querySelector(".play");
+		const cover = document.querySelector(".cover");
+		const title = document.querySelector(".music-player__title");
+		const author = document.querySelector(".music-player__author");
+
+		const loopBtn = document.getElementById("loop");
+		const shuffleBtn = document.getElementById("shuffle");
+		const prevBtn = document.getElementById("prev");
+		const nextBtn = document.getElementById("next");
+		const progressDiv = document.getElementById("progress");
+
+		function play(e) {
+			if (!isPlaying) {
+				const playButtonIcon = "https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/pause.svg";
+				const playButton = document.getElementById('play').firstElementChild;
+				playButton.src = playButtonIcon;
+				e.target.src = playButtonIcon;
+				e.target.alt = "Pause";
+				isPlaying = true;
+				document.getElementById(currentAudio).play();
+				showTime();
+			} else {
+				// console.log('pause');
+				e.target.src =
+					"https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/play.svg";
+				e.target.alt = "Play";
+				document.getElementById(currentAudio).pause();
+				isPlaying = false;
+				clearInterval(timer);
+			}
+		}
+
+		function changeBar() {
+			const audio = document.getElementById(currentAudio);
+			const percentage = (audio.currentTime / audio.duration).toFixed(3);
+			progressBar.style.transition = "";
+			// console.log(audio.currentTime);
+
+			//set current time
+			const minute = Math.floor(audio.currentTime / 60);
+			const second = Math.floor(audio.currentTime % 60);
+			const leftTime = audio.duration - audio.currentTime;
+			currentTimeIndicator.innerHTML =
+				("0" + minute).substr(-2) + ":" + ("0" + second).substr(-2);
+
+			//set left time
+			const leftMinute = Math.floor(leftTime / 60);
+			const leftSecond = Math.floor(leftTime % 60);
+
+			leftTimeIndicator.innerHTML =
+				("0" + leftMinute).substr(-2) + ":" + ("0" + leftSecond).substr(-2);
+
+			//set time bar
+			progressBar.style.width = percentage * 100 + "%";
+		}
+
+		function showTime() {
+			timer = setInterval(() => changeBar(), 500);
+		}
+
+		function nextMusic(mode) {
+			playBtn.src =
+				"https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/play.svg";
+			playBtn.alt = "Play";
+			document.getElementById(currentAudio).pause();
+			isPlaying = false;
+			clearInterval(timer);
+
+			if (mode === "next") {
+				currentId = currentId + 1 > list.length - 1 ? 0 : currentId + 1;
+				init();
+			} else {
+				currentId = currentId - 1 < 0 ? list.length - 1 : currentId - 1;
+				init();
+			}
+			const event = { target: 'img.play.player-img' };
+			play(event);
+		}
+
+		function shuffle(e) {
+			isShuffle = !isShuffle;
+			if (isShuffle) {
+				e.target.parentNode.classList.add("is-loop");
+			} else {
+				e.target.parentNode.classList.remove("is-loop");
+			}
+		}
+
+		function stopMusic() {
+			playBtn.src =
+				"https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/play.svg";
+			playBtn.alt = "Play";
+			isPlaying = false;
+		}
+
+		function goToNextMusic() {
+			let newId = currentId;
+			while (isShuffle && !loopOne && newId === currentId) {
+				newId = Math.floor(Math.random() * Math.floor(list.length - 1));
+			}
+
+			if (!isShuffle && !loopOne) {
+				currentId = currentId + 1 > list.length - 1 ? 0 : currentId + 1;
+			}
+			if (!isShuffle && loopOne) {
+				currentId = currentId;
+			}
+
+			if (isShuffle) {
+				currentId = newId;
+			}
+			init();
+			document.getElementById(currentAudio).play();
+		}
+
+		function loop(e) {
+			const audio = document.getElementById(currentAudio);
+
+			if (!isLoop && !loopOne) {
+				isLoop = true;
+				loopOne = false;
+				// console.log('is loop');
+				e.target.parentNode.classList.add("is-loop");
+				e.target.src =
+					"https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/loop.svg";
+				audio.loop = false;
+				audio.onended = e => goToNextMusic();
+				console.log(isLoop, loopOne);
+			} else if (isLoop && !loopOne) {
+				// console.log('is loop one');
+				isLoop = true;
+				loopOne = true;
+				e.target.parentNode.classList.add("is-loop");
+				e.target.src =
+					"https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/loopone.svg";
+				audio.loop = true;
+				audio.onended = e => goToNextMusic();
+				console.log(isLoop, loopOne);
+			} else {
+				// console.log('not loop');
+				isLoop = false;
+				loopOne = false;
+				e.target.parentNode.classList.remove("is-loop");
+				e.target.src =
+					"https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/loop.svg";
+				audio.loop = false;
+				audio.onended = e => stopMusic();
+				console.log(isLoop, loopOne);
+			}
+		}
+
+		function progress(e) {
+			const audio = document.getElementById(currentAudio);
+			//get current position and minus progress bar's x position to get current position in progress bar
+			const pos =
+				(e.pageX - progressDiv.getClientRects()[0].x) /
+				progressDiv.getClientRects()[0].width;
+			audio.currentTime = pos * audio.duration;
+			changeBar();
+		}
+
+		function init() {
+			//reset music duration and setup audio
+			const audio =
+				document.getElementById(currentAudio) === null
+					? new Audio()
+					: document.getElementById(currentAudio);
+			audio.src = list[currentId].url;
+			audio.id = currentAudio;
+			document.getElementById(currentAudio) === null
+				? document.body.appendChild(audio)
+				: "";
+
+			progressBar.style.transition = "none";
+			progressBar.style.width = "0%";
+			document.getElementById(currentAudio).currentTime = 0;
+
+			title.innerHTML = list[currentId].title;
+			author.innerHTML = list[currentId].author;
+			cover.src = list[currentId].cover;
+
+			//set current time
+			audio.addEventListener("loadedmetadata", function () {
+				const leftMinute = Math.floor(audio.duration / 60);
+				const leftSecond = Math.floor(audio.duration % 60);
+				currentTimeIndicator.innerHTML = "00:00";
+				leftTimeIndicator.innerHTML =
+					("0" + leftMinute).substr(-2) + ":" + ("0" + leftSecond).substr(-2);
+				progressBar.style.transition = "";
+			});
+
+			//set loop
+			document.getElementById(currentAudio).onended = e => goToNextMusic(e);
+		}
+
+		playBtn.addEventListener("click", play);
+		loopBtn.addEventListener("click", loop);
+
+		shuffleBtn.addEventListener("click", shuffle);
+		// forwardBtn.addEventListener("click", forward);
+		// backwardBtn.addEventListener("click", backward);
+
+		prevBtn.addEventListener("click", e => nextMusic("prev"));
+		nextBtn.addEventListener("click", e => nextMusic("next"));
+		progressDiv.addEventListener("click", e => {
+			progress(e);
+		});
+
+		init();
+	})();
+</script>
