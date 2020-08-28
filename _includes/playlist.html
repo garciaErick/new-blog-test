@@ -273,7 +273,7 @@
 		<div class="c-containter">
 			<div class="music-container">
 				<section class="album-cover">
-					<img src="https://erick-garcia.com/images/profile_2019.jpg" class="cover"
+					<img src="/images/playlist/playlist-cover.jpg" class="cover"
 						alt="From One To Nine by Marcel Pequel" style=" max-width: 270px; max-height: 270px;">
 				</section>
 				<section class=" music-player">
@@ -288,26 +288,21 @@
 					</div>
 					<div class="music-order">
 						<div class="music-order__loop is-loop" id="loop">
-							<img class="player-img"
-								src="https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/loop.svg" alt="Loop music">
+							<img class="player-img" src="/images/playlist/loop.svg" alt="Loop music">
 						</div>
 						<div class="music-order__shuffle" id="shuffle">
-							<img src="https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/shuffle.svg"
-								alt="Shuffle music">
+							<img src="/images/playlist/shuffle.svg" alt="Shuffle music">
 						</div>
 					</div>
 					<div class="music-control">
 						<div class="music-control__backward" id="prev">
-							<img class="player-img"
-								src="https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/backward.svg" alt="Backward">
+							<img class="player-img" src="/images/playlist/backward.svg" alt="Backward">
 						</div>
 						<div class="music-control__play" id="play">
-							<img src="https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/play.svg" alt="Play"
-								class="play player-img">
+							<img src="/images/playlist/play.svg" alt="Play" class="play player-img">
 						</div>
 						<div class="music-control__forward" id="next">
-							<img class="player-img"
-								src="https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/forward.svg" alt="Forward">
+							<img class="player-img" src="/images/playlist/forward.svg" alt="Forward">
 						</div>
 					</div>
 				</section>
@@ -323,84 +318,12 @@
 			{
 				id: 1,
 				url:
-					"http://cdn.atrera.com/audio/Marcel_Pequel_-_01_-_One.mp3",
-				author: "Marcel Pequel",
-				title: "One",
+					"/assets/playlist/tycho-jetty.mp3",
+				author: "Tycho",
+				title: "Jetty",
 				cover:
-					"https://erick-garcia.com/images/profile_2019.jpg"
+					"/images/playlist/playlist-cover.jpg"
 			},
-			{
-				id: 2,
-				url:
-					"http://cdn.atrera.com/audio/Marcel_Pequel_-_02_-_Two.mp3",
-				author: "Marcel Pequel",
-				title: "Two",
-				cover:
-					"http://cdn.atrera.com/images/cover_yz2mak.jpg"
-			},
-			{
-				id: 3,
-				url:
-					"http://cdn.atrera.com/audio/Marcel_Pequel_-_03_-_Three.mp3",
-				author: "Marcel Pequel",
-				title: "Three",
-				cover:
-					"http://cdn.atrera.com/images/cover_yz2mak.jpg"
-			},
-			{
-				id: 4,
-				url:
-					"http://cdn.atrera.com/audio/Marcel_Pequel_-_04_-_Four.mp3",
-				author: "Marcel Pequel",
-				title: "Four",
-				cover:
-					"http://cdn.atrera.com/images/cover_yz2mak.jpg"
-			},
-			{
-				id: 5,
-				url:
-					"http://cdn.atrera.com/audio/Marcel_Pequel_-_05_-_Five.mp3",
-				author: "Marcel Pequel",
-				title: "Five",
-				cover:
-					"http://cdn.atrera.com/images/cover_yz2mak.jpg"
-			},
-			{
-				id: 6,
-				url:
-					"http://cdn.atrera.com/audio/Marcel_Pequel_-_06_-_Six.mp3",
-				author: "Marcel Pequel",
-				title: "Six",
-				cover:
-					"http://cdn.atrera.com/images/cover_yz2mak.jpg"
-			},
-			{
-				id: 7,
-				url:
-					"http://cdn.atrera.com/audio/Marcel_Pequel_-_07_-_Seven.mp3",
-				author: "Marcel Pequel",
-				title: "Seven",
-				cover:
-					"http://cdn.atrera.com/images/cover_yz2mak.jpg"
-			},
-			{
-				id: 8,
-				url:
-					"http://cdn.atrera.com/audio/Marcel_Pequel_-_08_-_Eight.mp3",
-				author: "Marcel Pequel",
-				title: "Eight",
-				cover:
-					"http://cdn.atrera.com/images/cover_yz2mak.jpg"
-			},
-			{
-				id: 9,
-				url:
-					"http://cdn.atrera.com/audio/Marcel_Pequel_-_09_-_Nine.mp3",
-				author: "Marcel Pequel",
-				title: "Nine",
-				cover:
-					"http://cdn.atrera.com/images/cover_yz2mak.jpg"
-			}
 		];
 
 		let currentId = 0;
@@ -409,7 +332,6 @@
 		let isShuffle = false;
 		let currentAudio = "music1";
 		let timer = null;
-		let loopOne = false;
 
 		const currentTimeIndicator = document.querySelector(".music-time__current");
 		const leftTimeIndicator = document.querySelector(".music-time__last");
@@ -427,7 +349,7 @@
 
 		function play(e) {
 			if (!isPlaying) {
-				const playButtonIcon = "https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/pause.svg";
+				const playButtonIcon = "/images/playlist/pause.svg";
 				const playButton = document.getElementById('play').firstElementChild;
 				playButton.src = playButtonIcon;
 				e.target.src = playButtonIcon;
@@ -438,7 +360,7 @@
 			} else {
 				// console.log('pause');
 				e.target.src =
-					"https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/play.svg";
+					"/images/playlist/play.svg";
 				e.target.alt = "Play";
 				document.getElementById(currentAudio).pause();
 				isPlaying = false;
@@ -450,7 +372,6 @@
 			const audio = document.getElementById(currentAudio);
 			const percentage = (audio.currentTime / audio.duration).toFixed(3);
 			progressBar.style.transition = "";
-			// console.log(audio.currentTime);
 
 			//set current time
 			const minute = Math.floor(audio.currentTime / 60);
@@ -475,8 +396,8 @@
 		}
 
 		function nextMusic(mode) {
-			playBtn.src =
-				"https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/play.svg";
+			const playButtonIcon = "/images/playlist/play.svg";
+			playBtn.src = playButtonIcon;
 			playBtn.alt = "Play";
 			document.getElementById(currentAudio).pause();
 			isPlaying = false;
@@ -504,21 +425,21 @@
 
 		function stopMusic() {
 			playBtn.src =
-				"https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/play.svg";
+				"/images/playlist/play.svg";
 			playBtn.alt = "Play";
 			isPlaying = false;
 		}
 
 		function goToNextMusic() {
 			let newId = currentId;
-			while (isShuffle && !loopOne && newId === currentId) {
+			while (isShuffle && newId === currentId) {
 				newId = Math.floor(Math.random() * Math.floor(list.length - 1));
 			}
 
-			if (!isShuffle && !loopOne) {
+			if (!isShuffle) {
 				currentId = currentId + 1 > list.length - 1 ? 0 : currentId + 1;
 			}
-			if (!isShuffle && loopOne) {
+			if (!isShuffle) {
 				currentId = currentId;
 			}
 
@@ -532,36 +453,23 @@
 		function loop(e) {
 			const audio = document.getElementById(currentAudio);
 
-			if (!isLoop && !loopOne) {
+			if (!isLoop) {
 				isLoop = true;
-				loopOne = false;
-				// console.log('is loop');
 				e.target.parentNode.classList.add("is-loop");
 				e.target.src =
-					"https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/loop.svg";
+					"/images/playlist/loop.svg";
 				audio.loop = false;
 				audio.onended = e => goToNextMusic();
-				console.log(isLoop, loopOne);
-			} else if (isLoop && !loopOne) {
-				// console.log('is loop one');
-				isLoop = true;
-				loopOne = true;
-				e.target.parentNode.classList.add("is-loop");
-				e.target.src =
-					"https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/loopone.svg";
-				audio.loop = true;
-				audio.onended = e => goToNextMusic();
-				console.log(isLoop, loopOne);
+				console.log(isLoop);
 			} else {
 				// console.log('not loop');
 				isLoop = false;
-				loopOne = false;
 				e.target.parentNode.classList.remove("is-loop");
 				e.target.src =
 					"https://snowleo208.github.io/100-Days-of-Code/7.%20Music%20Player/img/loop.svg";
 				audio.loop = false;
 				audio.onended = e => stopMusic();
-				console.log(isLoop, loopOne);
+				console.log(isLoop);
 			}
 		}
 
