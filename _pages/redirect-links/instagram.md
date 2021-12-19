@@ -1,5 +1,5 @@
 ---
 layout: redirect 
 permalink: /instagram/
-redirectLink: https://instagram.com/tsunderick/
+redirectLink: https://instagram.com/tsunderick_/
 ---
